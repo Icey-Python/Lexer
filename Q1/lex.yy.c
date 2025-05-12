@@ -438,8 +438,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "verb_recognizer.1"
-#line 2 "verb_recognizer.1"
+#line 1 "word_counter.1"
+#line 2 "word_counter.1"
 #include <stdio.h>
 int word_count = 0;
 int total_size = 0;
@@ -661,7 +661,7 @@ YY_DECL
 		}
 
 	{
-#line 7 "verb_recognizer.1"
+#line 7 "word_counter.1"
 
 
 #line 668 "lex.yy.c"
@@ -723,7 +723,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "verb_recognizer.1"
+#line 9 "word_counter.1"
 { 
                 word_count++; 
                 total_size += yyleng; 
@@ -732,17 +732,17 @@ YY_RULE_SETUP
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 13 "verb_recognizer.1"
+#line 13 "word_counter.1"
 ; /* ignore whitespace */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 14 "verb_recognizer.1"
+#line 14 "word_counter.1"
 ; /* ignore other characters */
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 16 "verb_recognizer.1"
+#line 16 "word_counter.1"
 ECHO;
 	YY_BREAK
 #line 749 "lex.yy.c"
@@ -1750,7 +1750,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 16 "verb_recognizer.1"
+#line 16 "word_counter.1"
 
 
 int main() {

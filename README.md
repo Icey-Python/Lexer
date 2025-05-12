@@ -12,7 +12,7 @@ The project is organized into three separate questions/solutions:
 
 ## Solutions
 
-### Q1: Word Count Analyzer
+### Q1:(1.a) Word Count Analyzer
 
 A lexical analyzer that counts the total number of words in a text file and calculates their combined size in characters.
 
@@ -25,10 +25,12 @@ A lexical analyzer that counts the total number of words in a text file and calc
 **Usage:**
 ```bash
 cd Q1
+flex word_counter.1
+gcc lex.yy.c -o word_counter -lfl
 ./verb_recognizer < input.txt
 ```
 
-### Q2: Text Capitalizer
+### Q2:(1.b) Text Capitalizer
 
 A lexical analyzer that capitalizes text from the input.
 
@@ -45,7 +47,7 @@ gcc lex.yy.c -o capitalize -lfl
 ./capitalize < input.txt
 ```
 
-### Q3: Verb Recognizer
+### Q3:(2) Verb Recognizer
 
 A lexical analyzer that identifies and extracts common English verbs from text.
 
