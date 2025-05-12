@@ -1,11 +1,14 @@
 %{
 #include <stdio.h>
-#include <ctype.h>
 %}
 
 %%
-[a-zA-Z]    { putchar(toupper(yytext[0])); }
-.|\n        { putchar(yytext[0]); }
+
+abc         { printf("ABC"); }           /* Replace abc with ABC */
+[a-zA-Z]+   { printf("%s ", yytext); }   /* Print English words */
+[ \t\n]     { printf("%s", yytext); }    /* Preserve whitespace */
+.           { printf("%s", yytext); }    /* Print other characters */
+
 %%
 
 int main() {
@@ -15,4 +18,4 @@ int main() {
 
 int yywrap() {
     return 1;
-} 
+}
