@@ -1,0 +1,23 @@
+%{
+#include <stdio.h>
+%}
+
+VERB    (is|am|are|were|was|be|being|been|do|does|did|will|would|should|can|could|has|have|had|go)
+
+%%
+
+{VERB}      { printf("Found verb: %s\n", yytext); }
+[a-zA-Z]+   ; /* ignore other words */
+[ \t\n]     ; /* ignore whitespace */
+.           ; /* ignore other characters */
+
+%%
+
+int main() {
+    yylex();
+    return 0;
+}
+
+int yywrap() {
+    return 1;
+}
